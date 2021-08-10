@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <title>Document</title>
 </head>
 <body>
 
-<a href="https://aktivradio.ch">Zurück zur Webseite</a>
-   
+<button class="back" onclick="closeWin()">Zurück zur Webseite</button>
+
+<div>
 <a href="https://aktivradio.ch"><img src="https://i.ibb.co/NTJb57T/1920x1080-New.png" alt="1920x1080-New" class="LogoPic"></a>
+</div>
 
 <div class="player">
 <script src="https://embed.radio.co/player/1cc8c86.js" class="player"></script>
@@ -21,15 +23,27 @@
 display: block;
   margin-left: auto;
   margin-right: auto;
+  width: auto;
+  height: auto;
 }
 
 .player{
     display: block;
     text-align: center;
+    width: auto;
+    height: auto;
 }
 
 
 </style>
+
+<script>
+      function closeWin() {
+        window.opener = self;
+    window.close();
+      }
+</script>
+
 
 </body>
 </html>
